@@ -1,10 +1,141 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Zaguk</title><style>
-:root{--bg:#fff;--fg:#1d1d1f;--mut:#6e6e73;--ac:#5b4bdb;--line:#e5e5ea}
-@media(prefers-color-scheme:dark){:root{--bg:#111114;--fg:#f2f2f7;--mut:#a1a1a6;--ac:#9d93ff;--line:#2c2c30}}
-body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.7 -apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Hiragino Sans",sans-serif}
-main{max-width:720px;margin:0 auto;padding:32px max(16px,env(safe-area-inset-left))}
-h1{font-size:1.8rem;margin:.2em 0}h2{font-size:1.2rem;margin-top:1.8em}
-nav,.lang{font-size:.9rem;color:var(--mut)}a{color:var(--ac)}
-section{border-top:1px solid var(--line);margin-top:2.5em;padding-top:1em}
-footer{margin-top:3em;color:var(--mut);font-size:.85rem}
-</style></head><body><main><nav><a href="index.html">Zaguk</a> · <a href="support.html">Support</a> · <a href="privacy.html">Privacy</a></nav><p class="lang"><a href="#ko">한국어</a> · <a href="#en">English</a> · <a href="#ja">日本語</a></p><section id="ko" lang="ko"><h1>자국 · Zaguk</h1><p>달린 순간을 7초 영상으로. Apple 건강에 저장된 러닝 기록을 세로 영상과 이미지로 만들어 주는 iPhone 앱이에요.</p><ul><li>거리, 시간, 페이스, 날짜를 템플릿에 맞춰 표시</li><li>사진을 더해 나만의 러닝 인증 만들기</li><li>한국어, 영어, 일본어 지원</li></ul><p>문의: <a href="mailto:syujin1983@gmail.com">syujin1983@gmail.com</a> · <a href="support.html">지원</a> · <a href="privacy.html">개인정보처리방침</a></p></section><section id="en" lang="en"><h1>Zaguk</h1><p>Your run, in 7 seconds. An iPhone app that turns the runs saved in Apple Health into vertical videos and images.</p><ul><li>Distance, time, pace and date laid out by each template</li><li>Add a photo to make your own run post</li><li>Available in English, Korean and Japanese</li></ul><p>Contact: <a href="mailto:syujin1983@gmail.com">syujin1983@gmail.com</a> · <a href="support.html">Support</a> · <a href="privacy.html">Privacy Policy</a></p></section><section id="ja" lang="ja"><h1>Zaguk（ジャグク）</h1><p>走った瞬間を7秒の動画に。Appleヘルスケアに保存されたランニングの記録を、縦型の動画と画像にするiPhoneアプリです。</p><ul><li>距離・時間・ペース・日付をテンプレートに合わせて表示</li><li>写真を加えて自分だけのラン記録を作成</li><li>日本語・韓国語・英語に対応</li></ul><p>お問い合わせ: <a href="mailto:syujin1983@gmail.com">syujin1983@gmail.com</a> · <a href="support.html">サポート</a> · <a href="privacy.html">プライバシーポリシー</a></p></section><footer>© 2026 Zaguk</footer></main></body></html>
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Zaguk</title>
+<meta name="description" content="Your run, in 7 seconds. 달린 순간을 7초 영상으로. 走った瞬間を7秒の動画に。">
+<meta property="og:title" content="Zaguk 자국">
+<meta property="og:description" content="Your run, in 7 seconds.">
+<meta property="og:image" content="img/1-en.jpg">
+<link rel="icon" href="img/icon.png">
+<meta name="color-scheme" content="dark">
+<style>
+:root{--bg:#1b1566;--bg2:#321b33;--fg:#f6f3ff;--mut:#c4bdea;--ac:#ff7a59;--card:rgba(255,255,255,.07);--line:rgba(255,255,255,.16);color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;color:var(--fg);background:var(--bg) linear-gradient(180deg,var(--bg) 0%,#241766 55%,var(--bg2) 100%) fixed;font:16px/1.7 -apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Hiragino Sans","Noto Sans KR","Noto Sans JP",sans-serif;-webkit-text-size-adjust:100%}
+a{color:var(--ac)}
+.wrap{max-width:1040px;margin:0 auto;padding-block:20px 56px;padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env(safe-area-inset-right))}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.top nav a{color:var(--mut);text-decoration:none;font-size:.92rem;margin-right:14px}
+.sw{display:flex;gap:4px;border:1px solid var(--line);border-radius:999px;padding:3px}
+.sw button{font:inherit;font-size:.85rem;color:var(--mut);background:none;border:0;border-radius:999px;padding:5px 12px;cursor:pointer;min-height:32px}
+.sw button[aria-pressed=true]{background:var(--ac);color:#2a1020;font-weight:700}
+.js .lang-sec{display:none} .js .lang-sec.on{display:block}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center;padding-block:36px 24px}
+.icon{border-radius:18px;display:block}
+.name{margin:14px 0 0;color:var(--mut);font-weight:600;letter-spacing:.04em}
+h1{font-size:clamp(2.2rem,6.4vw,3.8rem);line-height:1.12;margin:.15em 0 .35em;text-wrap:balance}
+h1 span{color:var(--ac)}
+.sub{color:var(--mut);font-size:1.08rem;max-width:34em;margin:0 0 1.2em}
+.store{display:inline-block;padding:12px 22px;border-radius:999px;background:var(--ac);color:#2a1020;font-weight:700;text-decoration:none}
+.store[aria-disabled=true]{background:transparent;color:var(--fg);border:1px solid var(--line);cursor:default}
+.hero-shot{width:100%;max-width:360px;height:auto;justify-self:center;border-radius:28px;box-shadow:0 24px 60px rgba(0,0,0,.45)}
+.block{margin-top:56px}
+h2{font-size:1.5rem;margin:0 0 .6em;text-wrap:balance}
+.feats{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.feats li{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 18px 8px}
+.feats h3{margin:0 0 .3em;font-size:1.05rem} .feats p{margin:0 0 .8em;color:var(--mut);font-size:.95rem}
+.gallery{display:flex;gap:16px;overflow-x:auto;padding:4px 2px 18px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+.gallery img{flex:0 0 auto;width:min(240px,62vw);height:auto;border-radius:20px;scroll-snap-align:start;box-shadow:0 14px 34px rgba(0,0,0,.4)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:32px} .two>div{min-width:0}
+.steps,.plain{margin:0;padding-left:1.3em;color:var(--mut)} .steps li,.plain li{margin:.45em 0} .steps li::marker{color:var(--ac);font-weight:700} .plain{list-style:disc}
+.free{margin:0 0 .5em} .note{color:var(--mut);font-size:.88rem;margin:0}
+footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);color:var(--mut);font-size:.9rem}
+@media(max-width:760px){.hero{grid-template-columns:1fr;text-align:left}.hero-shot{max-width:300px;justify-self:start}.two{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:no-preference){.gallery{scroll-behavior:smooth}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><nav><a href="index.html">Zaguk</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a></nav><div class="sw" role="group" aria-label="Language"><button type="button" data-l="ko">한국어</button><button type="button" data-l="en">English</button><button type="button" data-l="ja">日本語</button></div></div>
+
+<section class="lang-sec" id="ko" lang="ko">
+  <header class="hero">
+    <div class="hero-text">
+      <img class="icon" src="img/icon.png" alt="" width="72" height="72">
+      <p class="name">자국 · Zaguk</p>
+      <h1>달린 순간을<br><span>7초 영상으로</span></h1>
+      <p class="sub">Apple 건강에 저장된 러닝 기록을 세로 영상과 이미지로 만들어 줘요. 사진 한 장만 더하면 나만의 러닝 인증이 완성돼요.</p>
+      <p class="cta"><a class="store" data-store href="#ko" aria-disabled="true">App Store 출시 준비 중</a></p>
+    </div>
+    <img class="hero-shot" src="img/1-ko.jpg" alt="달린 순간을 7초 영상으로" width="600" height="1301">
+  </header>
+  <div class="block"><h2>이런 점이 좋아요</h2><ul class="feats"><li><h3>기록은 자동으로</h3><p>건강 앱에 저장된 러닝을 그대로 불러와요. 직접 입력할 필요가 없어요.</p></li><li><h3>7초 세로 영상과 이미지</h3><p>거리, 시간, 페이스, 날짜를 템플릿에 맞춰 보여줘요. 스토리, 릴스, 숏츠에 올리기 좋은 세로 비율이에요.</p></li><li><h3>사진에 어울리는 템플릿</h3><p>필름 사진, 하늘, 일기예보, 지하철 노선도, 몽타주 등 다양한 스타일 중에서 골라요.</p></li><li><h3>글씨·색·문구는 내 맘대로</h3><p>한 줄 문구와 글꼴, 색을 바꾸고 보여줄 기록을 직접 고를 수 있어요.</p></li></ul></div>
+  <div class="block"><h2>화면 둘러보기</h2><div class="gallery"><img src="img/2-ko.jpg" alt="사진과 기록으로 만든 러닝 영상" width="600" height="1301" loading="lazy"><img src="img/3-ko.jpg" alt="사진에 어울리는 템플릿 고르기" width="600" height="1301" loading="lazy"><img src="img/4-ko.jpg" alt="글씨, 색, 문구 바꾸기" width="600" height="1301" loading="lazy"><img src="img/5-ko.jpg" alt="저장하고 바로 공유" width="600" height="1301" loading="lazy"></div></div>
+  <div class="block two">
+    <div><h2>사용 방법</h2><ol class="steps"><li>건강 앱 접근을 허용해요</li><li>러닝 기록을 고르고 템플릿을 선택해요</li><li>사진을 더하고 영상이나 이미지로 저장해요</li></ol></div>
+    <div><h2>개인정보는 소중히</h2><ul class="plain"><li>건강 데이터는 읽기만 하고, 영상을 만드는 데에만 써요. 기록은 기기 안에서 처리해요.</li><li>날씨를 보여주려고 시작 지점의 대략적인 위치(약 1km 단위)만 Apple 날씨에 보내요.</li><li>사진은 저장만 하고, 보관함 전체를 읽지 않아요.</li><li>건강 데이터는 광고나 마케팅에 쓰지 않아요.</li></ul></div>
+  </div>
+  <div class="block"><h2>무료예요</h2><p class="free">앱은 무료예요. 일부 템플릿은 영상을 저장하기 전에 짧은 광고를 보면 쓸 수 있고, 광고 없이 쓸 수 있는 템플릿도 있어요.</p><p class="note">의료 목적의 앱이 아니며, 표시되는 수치는 건강 앱의 기록을 바탕으로 한 참고용이에요.</p></div>
+  <footer><a href="support.html">지원</a> · <a href="privacy.html">개인정보처리방침</a> · 문의: <a href="mailto:syujin1983@gmail.com">syujin1983@gmail.com</a><br><small>© 2026 Song Yujin</small></footer>
+</section>
+<section class="lang-sec" id="en" lang="en">
+  <header class="hero">
+    <div class="hero-text">
+      <img class="icon" src="img/icon.png" alt="" width="72" height="72">
+      <p class="name">Zaguk</p>
+      <h1>Your run,<br><span>in 7 seconds</span></h1>
+      <p class="sub">Zaguk turns the runs saved in Apple Health into vertical videos and images. Add one photo and your run is ready to share.</p>
+      <p class="cta"><a class="store" data-store href="#en" aria-disabled="true">Coming soon to the App Store</a></p>
+    </div>
+    <img class="hero-shot" src="img/1-en.jpg" alt="Your run, in a 7-second video" width="600" height="1301">
+  </header>
+  <div class="block"><h2>Why you will like it</h2><ul class="feats"><li><h3>Your runs, automatically</h3><p>Zaguk reads the runs already saved in Apple Health. Nothing to type in.</p></li><li><h3>A 7-second vertical video or image</h3><p>Distance, time, pace and date are laid out by each template, in a vertical format made for Stories, Reels and Shorts.</p></li><li><h3>Templates that fit your photo</h3><p>Film photo, sky, weather forecast, subway map, montage and more.</p></li><li><h3>Text, color, words: your own</h3><p>Change the caption, font and color, and choose which stats to show.</p></li></ul></div>
+  <div class="block"><h2>Take a look</h2><div class="gallery"><img src="img/2-en.jpg" alt="A run video made from a photo and stats" width="600" height="1301" loading="lazy"><img src="img/3-en.jpg" alt="Pick the look that fits your photo" width="600" height="1301" loading="lazy"><img src="img/4-en.jpg" alt="Change text, color and words" width="600" height="1301" loading="lazy"><img src="img/5-en.jpg" alt="Save it and share right away" width="600" height="1301" loading="lazy"></div></div>
+  <div class="block two">
+    <div><h2>How it works</h2><ol class="steps"><li>Allow access to Apple Health</li><li>Pick a run and choose a template</li><li>Add a photo if you like, then save it as a video or an image</li></ol></div>
+    <div><h2>Your privacy, kept</h2><ul class="plain"><li>Health data is read only, and used only to make your video. Your runs are processed on your device.</li><li>To show the weather, only the approximate location of where your run started (about 1 km precision) is sent to Apple Weather.</li><li>Photos are only saved; Zaguk does not read your whole photo library.</li><li>Health data is never used for advertising or marketing.</li></ul></div>
+  </div>
+  <div class="block"><h2>Free</h2><p class="free">Zaguk is free. Some templates need you to watch a short ad before you save the video. Some templates are available without any ad.</p><p class="note">Zaguk is not a medical app. The numbers shown are based on your Apple Health records and are for reference only.</p></div>
+  <footer><a href="support.html">Support</a> · <a href="privacy.html">Privacy Policy</a> · Contact: <a href="mailto:syujin1983@gmail.com">syujin1983@gmail.com</a><br><small>© 2026 Song Yujin</small></footer>
+</section>
+<section class="lang-sec" id="ja" lang="ja">
+  <header class="hero">
+    <div class="hero-text">
+      <img class="icon" src="img/icon.png" alt="" width="72" height="72">
+      <p class="name">Zaguk（ジャグク）</p>
+      <h1>走った瞬間を<br><span>7秒の動画に</span></h1>
+      <p class="sub">Appleヘルスケアに保存されたランニングの記録を、縦型の動画と画像にします。写真を1枚足すだけで、あなただけのランの記録が完成します。</p>
+      <p class="cta"><a class="store" data-store href="#ja" aria-disabled="true">App Storeで公開準備中</a></p>
+    </div>
+    <img class="hero-shot" src="img/1-ja.jpg" alt="走った瞬間を7秒の動画に" width="600" height="1301">
+  </header>
+  <div class="block"><h2>ここがうれしい</h2><ul class="feats"><li><h3>記録は自動で</h3><p>ヘルスケアに保存されたランをそのまま読み込みます。入力の手間はありません。</p></li><li><h3>7秒の縦型動画と画像</h3><p>距離、時間、ペース、日付をテンプレートに合わせて表示。ストーリーズ、リール、ショートに向いた縦型です。</p></li><li><h3>写真に合うテンプレート</h3><p>フィルム写真、空、天気予報、路線図、モンタージュなど、さまざまなスタイルから選べます。</p></li><li><h3>文字も色も言葉も自分らしく</h3><p>ひとことの文章、フォント、色を変えて、表示する記録も選べます。</p></li></ul></div>
+  <div class="block"><h2>画面を見る</h2><div class="gallery"><img src="img/2-ja.jpg" alt="写真と記録で作るラン動画" width="600" height="1301" loading="lazy"><img src="img/3-ja.jpg" alt="写真に合うテンプレートを選ぶ" width="600" height="1301" loading="lazy"><img src="img/4-ja.jpg" alt="文字・色・言葉を変える" width="600" height="1301" loading="lazy"><img src="img/5-ja.jpg" alt="保存してすぐ共有" width="600" height="1301" loading="lazy"></div></div>
+  <div class="block two">
+    <div><h2>使い方</h2><ol class="steps"><li>ヘルスケアへのアクセスを許可します</li><li>ランの記録を選び、テンプレートを選びます</li><li>お好みで写真を追加し、動画または画像として保存します</li></ol></div>
+    <div><h2>プライバシーを大切に</h2><ul class="plain"><li>ヘルスケアのデータは読み取りのみで、動画の作成にだけ使います。記録は端末内で処理されます。</li><li>天気を表示するため、ランを始めた場所のおおよその位置情報（約1km単位）だけをApple天気に送信します。</li><li>写真は保存のみで、ライブラリ全体は読み取りません。</li><li>ヘルスケアのデータを広告やマーケティングに使うことはありません。</li></ul></div>
+  </div>
+  <div class="block"><h2>無料です</h2><p class="free">アプリは無料です。一部のテンプレートは、動画を保存する前に短い広告を見ると使えます。広告なしで使えるテンプレートもあります。</p><p class="note">医療目的のアプリではありません。表示される数値はヘルスケアの記録に基づく参考値です。</p></div>
+  <footer><a href="support.html">サポート</a> · <a href="privacy.html">プライバシーポリシー</a> · お問い合わせ: <a href="mailto:syujin1983@gmail.com">syujin1983@gmail.com</a><br><small>© 2026 Song Yujin</small></footer>
+</section>
+</div>
+<script>
+(function(){
+  var root=document.documentElement,langs=['ko','en','ja'];
+  root.classList.add('js');
+  function pick(){
+    var h=(location.hash||'').slice(1);
+    if(langs.indexOf(h)>-1)return h;
+    var n=(navigator.language||'ko').slice(0,2);
+    return langs.indexOf(n)>-1?n:'en';
+  }
+  function show(l,push){
+    langs.forEach(function(x){
+      document.getElementById(x).classList.toggle('on',x===l);
+    });
+    document.querySelectorAll('.sw button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.l===l)});
+    root.lang=l;
+    if(push){try{history.replaceState(null,'','#'+l)}catch(e){}}
+  }
+  document.querySelectorAll('.sw button').forEach(function(b){b.addEventListener('click',function(){show(b.dataset.l,true)})});
+  window.addEventListener('hashchange',function(){show(pick(),false)});
+  show(pick(),false);
+  // 출시 후: App Store 주소를 넣으면 버튼이 활성화된다. 예) https://apps.apple.com/app/id6834376567
+  var STORE_URL='https://apps.apple.com/app/id6834376567';
+  if(STORE_URL){document.querySelectorAll('[data-store]').forEach(function(a){a.href=STORE_URL;a.removeAttribute('aria-disabled');a.textContent=a.closest('section').lang==='ko'?'App Store에서 받기':a.closest('section').lang==='ja'?'App Storeでダウンロード':'Get it on the App Store'})}
+})();
+</script>
+</body>
+</html>
